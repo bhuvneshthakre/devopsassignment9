@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+RUN apt-get update && \
+    apt-get -y install bash
+COPY prime.sh /prime.sh
+RUN chmod +x /prime.sh
+ENTRYPOINT ["/prime.sh"]
